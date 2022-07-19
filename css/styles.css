@@ -22,14 +22,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  /* outline: 2px dashed #f44336; */
 }
 
 /* TEST */
 
 .section {
   padding-bottom: 94px;
-  outline: 2px dashed #00ff44;
 }
 
 /* TEST */
@@ -40,9 +38,15 @@ h3,
 h4,
 p,
 ul,
-li {
+a {
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .text {
@@ -94,7 +98,7 @@ li {
 
 /* header */
 .head {
-  padding: 24px 0;
+  padding: 24px 0 25px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: var(--color-header-line);
@@ -130,6 +134,7 @@ li {
   letter-spacing: 0.02em;
   color: var(--color-text-p);
   margin-left: 35px;
+  display: inline-block;
 }
 .link.current {
   color: var(--color-design);
@@ -285,8 +290,6 @@ li {
 
 .foot-address {
   font-style: normal;
-  width: 231px; /* ширина замість флексів 
-  як в вимозі до ДЗ "B10"*/
 }
 .foot-link.maps-link {
   color: var(--color-design-global);
@@ -295,13 +298,16 @@ li {
 .foot-link {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.93; /* в макеті 1,71 */
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  display: block;
 }
-.foot-link:first-child {
-  margin-top: 0;
+
+.foot-link:not(:last-child) {
+  margin-bottom: 6px;
 }
+
 .foot-logo-box {
   margin-bottom: 20px;
 }
@@ -348,12 +354,12 @@ li {
 }
 .portfolio-item {
   background-color: var(--color-design-global);
-
-  outline: 2px dashed green;
 }
 
-.portfolio-item img {
-  width: 100%;
+.portfolio-item-box {
+  padding: 20px 24px;
+  border: 1px solid var(--color-design-line);
+  border-top-style: none;
 }
 
 .portfolio-title {
@@ -361,6 +367,7 @@ li {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--color-text-title);
+  margin-bottom: 4px;
 }
 .portfolio-text {
   font-size: 16px;
